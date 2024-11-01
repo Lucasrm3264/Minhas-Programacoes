@@ -1,0 +1,68 @@
+<html>
+<meta charset="UTF-8">
+<!-- comentario -->
+    <head>
+        <title>Exemplo de formulário</title>
+    </head>
+    <body bgcolor="Red" text="White">
+        <center>
+            <b><u><h1>Cadastro de Clientes</h1></u>
+        </center>
+        <form name="Cadastro">
+            <p>
+                <fieldset>
+                    <legend>Dados Pessoais:</legend>
+                    <label>Nome do Cliente:</label><br>
+                    <input type="text" value="" maxlength="60" size="60" required="yes">
+                    <p>
+                        <label>Senha:</label><br>
+                        <input type="password" value="" maxlength="20" size="60" required="yes">
+                    </p>
+                    <p>
+                        <label>Selecione Sua Idade:</label>
+                        <input type="number" min="1" max="100">
+                    </p>
+                    <p>
+                        <label>Selecione Uma Cidade:</label>
+                        <select name="cidades">
+                            <option value="sa">Santo André</option>
+                            <option value="sbc">São Bernardo do Campo</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="ma">Mauá</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Selecione os Cursos do Seu Interesse:</label>
+                        <ul>
+                            <li><input type="checkbox">Linguagem HTML</li>
+                            <li><input type="checkbox">Linguagem CSSL</li>
+                            <li><input type="checkbox">Linguagem JavaScript</li>
+                            <li><input type="checkbox">Linguagem PHP</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <label>Observações Gerais:</label><br>
+                        <textarea cols="50" rows="6"></textarea>
+                    </p>
+                </fieldset>
+                <p></p>
+                <fieldset>
+                    <legend>Selecione o Plano de Fundo:</legend>
+                    <input type="radio" name="cor" onclick="document.bgColor='orange';fgcolor='black'">Laranja
+                    <input type="radio" name="cor" onclick="document.bgColor='green';fgcolor='black'">Verde
+                    <input type="radio" name="cor" onclick="document.bgColor='blue';fgcolor='white'">Azul
+                    <input type="radio" name="cor" onclick="document.bgColor='gray';fgcolor='black'">Cinza
+                    <input type="radio" name="cor" onclick="document.bgColor='red';fgcolor='white'">Vermelho
+                </fieldset>
+            </p>
+            <center>
+                <p>
+                    <input type="submit" value="Enviar" &nbsp;&nbsp;>
+                    <input type="reset" value="Limpar" &nbsp;&nbsp;>
+                </p>
+            </center>
+        </form>
+    </body>
+
+
+</html>
