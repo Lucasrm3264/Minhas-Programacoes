@@ -1,0 +1,62 @@
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>Exercicio html</title>
+        
+        <style type="text/css">
+            @import url("estilo.css");
+        </style>
+
+
+        <script LANGUAGE="JavaScript">
+
+        function Validar(){
+        var user=document.frm_login.txt_usuario.value;
+        var email=document.frm_login.txt_usuario.value;
+        var pass=document.frm_login.txt_senha.value;
+
+        if ((user=="etec" || user=="etec@maua") && pass=="123a") {
+            alert("Conta logada com sucesso");
+            window.location="https://www.uol.com.br";
+        }
+        
+        else {
+            alert("Conta Invalida");
+            document.frm_login.txt_usuario.value="";
+            document.frm_login.txt_senha.value="";
+            document.frm_login.txt_usuario.focus();
+        }   
+
+
+        }
+
+
+        </script>
+
+    </head>
+    <body>
+        <div class="centro">
+            <center>
+        <b><u><h2>Login da Conta</h2></u></b>
+            </center>
+         <form name="frm_login">
+        <p>
+            <fieldset>
+                <legend>Indentificação</legend>
+                <label>Usuário ou E-mail</label><br>
+                <input id="caixa" type="text" name="txt_usuario" maxlength="60" size="60" required="yes">
+                <p>
+                    <label>Senha</label><br>
+                    <input id="caixa" type="password" name="txt_senha" maxlength="20" size="60" required="yes">
+                </p>
+                <center>
+                    <p>
+                        <input id="botao" type="button" name="btn_login" value="Entrar" onclick="Validar()" &nbsp;&nbsp;>
+                    </p>
+                </center>
+            </fieldset>
+        </p>
+        </form>
+        </div>
+    </body>
+</html>
