@@ -1,0 +1,23 @@
+Dim at,ant,suc
+Dim resp
+
+call int
+
+sub int()
+
+at=cint(inputbox("Digite o Numero Inteiro","Antecessor e sucessor"))
+
+suc=(at + 1)
+ant=(at - 1)
+
+resp=msgbox("Antecessor: " & ant & "" + vbnewline &_ 
+            "Sucessor: " & suc & "" + vbnewline &_ 
+            "Novo Calculo?",vbquestion+vbyesno,"Triangulo")
+
+if resp=vbyes then
+call int
+else
+   wscript.quit
+end if
+
+end sub
