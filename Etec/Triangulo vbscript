@@ -1,0 +1,22 @@
+Dim base,altura,soma
+Dim resultado
+
+call triangulo_isos 
+
+sub triangulo_isos()
+
+base=cdbl(inputbox("DIgite a Base do Triangulo","Triangulo"))
+altura=cdbl(inputbox("DIgite a Altura do Triangulo","Triangulo"))
+
+soma=round((base * altura) / 2 , 1)
+
+resultado=msgbox("A area do seu triangulo é : "& soma & "" + vbnewline &_ 
+                 "Novo Calculo?",vbquestion+vbyesno,"Triangulo")
+
+if resultado=vbyes then
+call triangulo_isos
+else
+    wscript.quit 
+end if
+
+end sub
